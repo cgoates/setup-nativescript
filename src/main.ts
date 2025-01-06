@@ -8,7 +8,6 @@ async function run(): Promise<void> {
     const version = core.getInput('nativescript-version') || 'latest'
     const nativescriptInstallCmd = `npm i -g nativescript@${version}`
 
-    await exec('npm config set unsafe-perm=true')
     const osvar = process.platform.toLowerCase()
 
     if (osvar === 'darwin') {
