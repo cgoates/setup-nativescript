@@ -33,7 +33,6 @@ function run() {
         try {
             const version = core.getInput('nativescript-version') || 'latest';
             const nativescriptInstallCmd = `npm i -g nativescript@${version}`;
-            yield exec('npm config set unsafe-perm=true');
             const osvar = process.platform.toLowerCase();
             if (osvar === 'darwin') {
                 // MacOSX
